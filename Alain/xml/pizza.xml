@@ -1,0 +1,22 @@
+<foodstore>
+    <food category="cooking">
+        <name lang="en">Everyday Italian</name>
+        <ingredients>Giada De Laurentiis</ingredients>
+        <id>1</id>
+        <price>30.00</price> </food>
+    <food category="children">
+        <name lang="en">Harry Potter</name>
+        <ingredients>J K. Rowling</ingredients>
+        <id>2</id>
+        <price>29.99</price> </food>
+    <food category="web">
+        <name lang="en">XQuery Kick Start</name>
+        <ingredients>James McGovern</ingredients>
+        <id>3</id>
+        <price>49.99</price> </food>
+    <food category="web" cover="paperback">
+        <name lang="en">Learning XML</name>
+        <ingredients>Erik T. Ray</ingredients>
+        <id>4</id>
+        <price>39.95</price> </food>
+</foodstore>

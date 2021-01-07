@@ -1,0 +1,137 @@
+
+body {
+    font-family: "Arial";
+}
+
+h1 {
+    text-align: center;
+}
+
+footer, nav {
+    background: lightskyblue;
+    border: 3px black solid;
+    border-radius: 2px;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    height: 70px;
+}
+
+nav a {
+    color: black;
+    font-size: larger;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav div a {
+    display: inline;
+    margin: 10px;
+    text-decoration: black underline solid;
+}
+
+nav div, nav span {
+    flex: auto;
+    margin: 0;
+    padding: 20px 10px;
+}
+
+nav div {
+    margin: 0;
+    text-align: right;
+}
+
+nav .icon {
+    display: none;
+    margin: 0;
+}
+
+nav .icon i::before {
+    color: black;
+}
+
+footer div {
+    flex: 1;
+    margin: 0 20px;
+}
+
+footer blockquote {
+    font-style: italic;
+}
+
+address {
+    float: right;
+}
+
+.product {
+    margin: 10px;
+}
+
+@media screen and (max-width: 730px) {
+    nav i::before {
+        font-size: 1.5em;
+    }
+    nav span a {
+        font-size: 1em;
+    }
+    nav div a {
+        display: none;
+    }
+    nav a.icon {
+        display: block;
+        float: right;
+        padding: 0;
+    }
+    nav.responsive {
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+    nav.responsive a.icon {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+    nav.responsive a {
+        display: block;
+        float: none;
+        text-align: left;
+    }
+    nav.responsive span a {
+        display: inline;
+    }
+    footer div blockquote {
+        display: none;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    address {
+        float: none;
+    }
+}
+#pizzas1 {
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+
+
+}
+#grid > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+
+}
+#demo1, #demo0, #demo2, #demo3 {
+background: yellow;
+    padding-top: 10px;
+    justify-content: center;
+    padding-bottom: 10px;
+}

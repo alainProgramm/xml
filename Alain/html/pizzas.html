@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <name>Tony's Pizza Factory</name>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/pizzas.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<nav>
+        <span>
+            <a href="">Tony's Pizza Factory</a>
+        </span>
+    <div>
+        <a href="">Pizza</a>
+        <a href="">Salad</a>
+        <a href="">Soft drinks</a>
+        <a href="">Feedback</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</nav>
+
+<div id="pizzas1">
+    <div id="demo0">
+    </div>
+
+    <div id="demo1">    </div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <div><img height="200" width="300" src ="" id="cool"></div>
+    <div><img height="200" width="300" src ="" id="cool1"></div>
+    <div><img height="200" width="300" src ="" id="cool2"></div>
+
+
+
+
+
+
+</div>
+
+<footer>
+    <div>
+        <p>Hours<br>
+            Mon-Thu: 11 am - 23 pm<br>
+            Fri-Sat: 11 am - 24pm<br>
+            Sunday closed</p>
+    </div>
+    <div>
+        <blockquote>
+            "The Pizzeria is one place I have been wanting to visit for a long time. The reason being their Napoli
+            pizza
+            which absolutely blew me away" - Jimmy
+        </blockquote>
+    </div>
+    <div>
+        <address>
+            <p>Address<br>
+                Tony's Pizza Factory<br>
+                2122 N Clark St<br>
+                Chicago, IL 60614, USA</p>
+        </address>
+    </div>
+</footer>
+<script>
+
+
+
+
+    var xhttp;
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+
+            myFunction(this);
+            pizzafunction(this);
+            zweitePizza(this);
+
+        }
+    };
+    xhttp.open("GET", "pizza.xml", true);
+    xhttp.send();
+
+
+
+
+    function myFunction(xml) {
+        var x, i, txt, xmlDoc, z;
+        z = 0;
+        xmlDoc = xml.responseXML;
+        txt = "";
+        x = xmlDoc.getElementsByTagName("name");
+        for (i = 0; i < x.length; i++) {
+          /*  txt += x[i].childNodes[0].nodeValue + "<br>";*/
+
+   document.getElementById("demo"+z).innerHTML =  x[i].childNodes[0].nodeValue;
+            z++;
+        }
+
+
+    }
+
+
+    function pizzafunction(xml) {
+        var x, i, txt, xmlDoc, z;
+        z = 0;
+        xmlDoc = xml.responseXML;
+        txt = "";
+        x = xmlDoc.getElementsByTagName("ingredients");
+        for (i = 0; i < x.length; i++) {
+            /*  txt += x[i].childNodes[0].nodeValue + "<br>";*/
+
+            if((document.getElementById("demo"+z).innerHTML = txt +  x[i].childNodes[0].nodeValue)!=null){
+                document.getElementById("demo"+z).innerHTML = txt +  x[i].childNodes[0].nodeValue
+                z++;
+            }
+
+        }
+
+
+    }
+
+    function Funktioniert(xml) {
+        var Docx = xml.responseXML;
+        var x = document.getElementsByTagName("image");
+        y = x[0]
+        let image = document.images[0];
+        var downloadingImage = new Image();
+        downloadingImage.onload = function () {
+            image.src = this.src;
+        };
+        downloadingImage.src = "https://farm5.staticflickr.com/4042/4660357797_09dcd917b1.jpg";
+
+    }
+
+
+    let image_the_second = document.images[1];
+    var downloadingImagetwo = new Image();
+    downloadingImagetwo.onload = function(){
+        image_the_second.src = this.src;
+    };
+    downloadingImagetwo.src = "https://farm4.staticflickr.com/3565/5818252079_29635c03cc.jpg";
+
+
+    let image_the_third = document.images[2];
+    var downloadingImagethree = new Image();
+    downloadingImagethree.onload = function(){
+        image_the_third.src = this.src;
+    };
+    downloadingImagethree.src = "https://farm9.staticflickr.com/8326/8096659940_4e0a65e598.jpg";
+
+
+    function zweitePizza(xml) {
+
+        var Docx, x, i, z;
+
+        Docx = xml.responseXML;
+        x =Docx.getElementsByTagName("price");
+
+
+        for (i = 0; i < x.length; i++) {
+            /*  txt += x[i].childNodes[0].nodeValue + "<br>";*/
+            document.getElementById("demo"+z).innerHTML =  x[i].childNodes[0].nodeValue;
+
+        }
+
+    }
+
+</script>
+</body>
+
+</html>

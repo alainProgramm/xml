@@ -1,0 +1,30 @@
+<foodstore>
+   <pizza>
+    <food category="grosse_Pizza">
+        <name lang="en">Piccante</name>
+        <ingredients>Tomato</ingredients>
+        <year>2005</year>
+        <price>30.00</price>
+        <image>https://farm5.staticflickr.com/4042/4660357797_09dcd917b1.jpg</image>
+    </food>
+    <food category="kinderpizza">
+        <name lang="en">Giardino</name>
+        <ingredients>Mozzarella</ingredients>
+        <year>2005</year>
+        <price>29.99</price> </food>
+    <image>https://farm4.staticflickr.com/3565/5818252079_29635c03cc.jpg</image>
+    <food category="halbe_Pizza">
+        <name lang="en">Prosciuotto e funghi</name>
+        <ingredients>Fresh Mushrooms</ingredients>
+        <year>2003</year>
+        <price>49.99</price>
+    <image>https://farm9.staticflickr.com/8326/8096659940_4e0a65e598.jpg"</image>
+    </food>
+    <food category="familienPizza" cover="paperback">
+        <name lang="en">Quattro formaggi</name>
+        <ingredients>Gorgonzola</ingredients>
+        <year>2003</year>
+        <price>39.95</price> </food>
+    <image>https://farm3.staticflickr.com/2797/4344770705_b6d159f799.jpg</image>
+   </pizza>
+</foodstore>
